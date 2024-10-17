@@ -21,3 +21,6 @@ add_executable(publisher src/publisher.cpp)
 
 target_link_libraries(publisher 
       ${catkin_LIBRARIES})
+
+install(DIRECTORY include
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})

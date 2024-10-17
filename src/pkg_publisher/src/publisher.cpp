@@ -1,7 +1,7 @@
 #include "ros/ros.h"
 #include <sensor_msgs/JointState.h>
 #include "publisher/quintic.hpp"
-#include "std_msgs/Float64MultiArray"
+#include "std_msgs/Float64MultiArray.h"
 
 
 

@@ -39,7 +39,7 @@ class MyNode
             using namespace std::chrono_literals;
             ros::Time t0=ros::Time::now();
             ros::Duration t(0, 0); 
-            ros::Rate loop_rate(1000); //5 Hz
+            ros::Rate loop_rate(1100); //5 Hz
             double traj_duration=8.0;
             
             /*Ciclo di "generazione traiettoria"**/

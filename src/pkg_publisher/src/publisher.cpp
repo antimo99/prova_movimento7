@@ -25,8 +25,6 @@ class MyNode
             q0.data={0,0,0,0,0,0,0};
             qf.data.resize(joint_names_.size());
 
-            qf.data={0,0,0,0,0,M_PI/4,0}; //configurazione da raggiungere
-
             // Attendi il singolo messaggio e salvalo nella variabile globale
             auto msg=ros::topic::waitForMessage<sensor_msgs::JointState>("joint_states",ros::Duration(1.0));
             for (size_t i = 0; i < msg->name.size(); ++i) 
@@ -35,6 +33,8 @@ class MyNode
             }
 
             q0.data=msg->position;
+            qf.data=q0.data; 
+            qf.data[6]+=M_PI/4;//configurazione da raggiungere
            
             using namespace std::chrono_literals;
             ros::Time t0=ros::Time::now();
